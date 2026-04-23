@@ -9,7 +9,8 @@
   <meta name="theme-color" content="#041133">
   <link rel="canonical" href="https://www.bluecordhealthagency.com/">
   <link rel="icon" type="image/png" href="images/Blue Cord Logo Mark.png">
-  <link rel="preload" as="image" href="images/optimized/site/hero-carousel-24-7-care-support-fast.png">
+  <link rel="preload" as="image" href="images/optimized/site/hero-carousel-24-7-care-support-mobile.png" media="(max-width: 640px)">
+  <link rel="preload" as="image" href="images/optimized/site/hero-carousel-24-7-care-support-fast.png" media="(min-width: 641px)">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Blue Cord Health Agency">
   <meta property="og:title" content="Blue Cord Health Agency | Home Care in Stafford, VA">
@@ -199,15 +200,23 @@
                 </div>
                 <div class="hero-media">
                   <div class="hero-media-frame">
-                    <img
-                      src="images/optimized/site/hero-carousel-24-7-care-support-fast.png"
-                      alt="Two smiling healthcare professionals holding a clock"
-                      width="1073"
-                      height="1200"
-                      loading="eager"
-                      fetchpriority="high"
-                      decoding="async"
-                    >
+                    <picture>
+                      <source
+                        media="(max-width: 640px)"
+                        srcset="images/optimized/site/hero-carousel-24-7-care-support-mobile.png"
+                        width="680"
+                        height="760"
+                      >
+                      <img
+                        src="images/optimized/site/hero-carousel-24-7-care-support-fast.png"
+                        alt="Two smiling healthcare professionals holding a clock"
+                        width="1073"
+                        height="1200"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                      >
+                    </picture>
                   </div>
                 </div>
               </div>
