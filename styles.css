@@ -647,6 +647,9 @@ svg {
 }
 
 .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 34px;
 }
 
@@ -668,6 +671,18 @@ svg {
 
 .hero-cta:hover {
   transform: translateY(-2px);
+}
+
+.hero-cta-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.hero-slide-light .hero-cta-secondary {
+  border-color: rgba(19, 87, 197, 0.22);
+  background: rgba(19, 87, 197, 0.08);
+  color: var(--accent-dark);
 }
 
 .hero-media {
@@ -4238,6 +4253,8 @@ svg {
   }
 
   .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
     margin-top: 26px;
   }
 
