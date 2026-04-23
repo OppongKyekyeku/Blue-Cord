@@ -262,6 +262,8 @@ svg {
 }
 
 .nav-wrap {
+  position: relative;
+  z-index: 90;
   background: #ffffff;
   border-bottom: 1px solid var(--border);
 }
@@ -3678,15 +3680,40 @@ svg {
     display: block;
   }
 
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  body.nav-open .nav-wrap {
+    z-index: 10000;
+  }
+
+  body.nav-open .hero-controls,
+  body.nav-open .hero-control {
+    display: none;
+  }
+
   .pointer-glow,
   .pointer-dot {
     display: none;
+  }
+
+  .contact-icon {
+    display: none;
+  }
+
+  .contact-item {
+    gap: 0;
   }
 
   .site-nav {
     grid-template-columns: 1fr auto;
     gap: 10px;
     padding: 14px 0;
+  }
+
+  .site-nav.menu-open {
+    z-index: 10000;
   }
 
   .brand img {
@@ -3696,26 +3723,37 @@ svg {
 
   .nav-toggle {
     position: relative;
+    z-index: 10002;
     display: inline-flex;
   }
 
   .nav-panel {
-    grid-column: 1 / -1;
+    position: fixed;
+    inset: 0;
+    z-index: 10001;
     flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    max-height: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    padding: clamp(96px, 16vh, 132px) max(22px, env(safe-area-inset-right)) max(28px, env(safe-area-inset-bottom)) max(22px, env(safe-area-inset-left));
+    background:
+      radial-gradient(circle at 92% 12%, rgba(50, 188, 154, 0.16), transparent 28%),
+      linear-gradient(180deg, #ffffff 0%, #edf4fb 100%);
+    box-shadow: 28px 0 60px rgba(10, 23, 41, 0.18);
     opacity: 0;
-    overflow: hidden;
+    overflow-y: auto;
     pointer-events: none;
-    transition: max-height 0.35s ease, opacity 0.25s ease, margin-top 0.25s ease;
+    transform: translateX(-100%);
+    transition: transform 0.34s ease, opacity 0.24s ease;
   }
 
   .site-nav.menu-open .nav-panel {
-    max-height: 920px;
-    margin-top: 6px;
     opacity: 1;
     pointer-events: auto;
+    transform: translateX(0);
   }
 
   .site-nav.menu-open .nav-toggle span:nth-child(1) {
@@ -3732,13 +3770,18 @@ svg {
 
   .nav-menu {
     width: 100%;
+    display: block;
+    flex: 0 0 auto;
   }
 
   .nav-list {
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
-    padding: 18px 0 16px;
+    gap: 4px;
+    width: 100%;
+    padding: 0;
+    font-size: clamp(1.45rem, 7vw, 2.35rem);
+    font-weight: 700;
   }
 
   .nav-list > li,
@@ -3747,8 +3790,25 @@ svg {
     width: 100%;
   }
 
+  .nav-menu a {
+    width: 100%;
+    padding: 12px 0;
+    white-space: normal;
+  }
+
+  .nav-menu a::after {
+    display: none;
+  }
+
   .nav-link-dropdown {
     justify-content: space-between;
+  }
+
+  .nav-dropdown:hover .nav-submenu,
+  .nav-dropdown:focus-within .nav-submenu {
+    opacity: 0;
+    visibility: hidden;
+    transform: none;
   }
 
   .nav-dropdown:hover .nav-arrow,
@@ -3756,22 +3816,38 @@ svg {
     transform: none;
   }
 
+  .nav-dropdown.is-open .nav-arrow {
+    transform: rotate(180deg);
+  }
+
   .nav-submenu {
     position: static;
+    display: grid;
+    gap: 0;
     width: 100%;
     max-width: none;
     min-width: 0;
-    margin: 8px 0 0 12px;
-    padding: 6px 0 2px 14px;
+    max-height: 0;
+    margin: 0;
+    padding: 0 0 0 14px;
     border: 0;
     border-left: 2px solid rgba(19, 87, 197, 0.14);
     border-radius: 0;
     background: transparent;
     box-shadow: none;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transform: none;
+    transition: max-height 0.28s ease, opacity 0.2s ease, visibility 0s linear 0.28s, margin 0.2s ease;
+  }
+
+  .nav-dropdown.is-open .nav-submenu {
+    max-height: 420px;
+    margin: 2px 0 8px;
     opacity: 1;
     visibility: visible;
-    transform: none;
-    transition: none;
+    transition-delay: 0s;
   }
 
   .nav-submenu::before {
@@ -3779,13 +3855,17 @@ svg {
   }
 
   .nav-submenu a {
-    padding: 7px 0;
-    font-size: 0.86rem;
+    padding: 8px 0;
+    color: var(--muted);
+    font-size: 0.98rem;
+    font-weight: 600;
   }
 
   .nav-cta {
     width: 100%;
     justify-content: center;
+    min-height: 54px;
+    margin-top: 4px;
   }
 
   .hero-carousel {
@@ -4232,9 +4312,19 @@ svg {
     font-size: 0.9rem;
   }
 
+  .nav-panel .nav-list {
+    font-size: clamp(1.35rem, 7vw, 2rem);
+  }
+
   .nav-cta {
     min-height: 40px;
     padding: 0 14px;
+  }
+
+  .nav-panel .nav-cta {
+    min-height: 54px;
+    margin-top: 4px;
+    padding: 0 18px;
   }
 
   .hero-carousel {
