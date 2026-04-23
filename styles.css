@@ -3786,10 +3786,22 @@ svg {
     margin-bottom: clamp(34px, 7vw, 70px);
   }
 
-  .hero-slides,
-  .hero-slide-surface,
+  .hero-slides {
+    height: auto;
+    min-height: 0;
+  }
+
+  .hero-slide.is-active {
+    position: relative;
+  }
+
+  .hero-slide-surface {
+    height: auto;
+    min-height: 0;
+  }
+
   .hero-slide-inner {
-    min-height: 760px;
+    min-height: 0;
   }
 
   .hero-slide-inner {
@@ -4224,7 +4236,7 @@ svg {
   .hero-slides,
   .hero-slide-surface,
   .hero-slide-inner {
-    min-height: 710px;
+    min-height: 0;
   }
 
   .hero-slide-surface {
@@ -4232,8 +4244,17 @@ svg {
   }
 
   .hero-slide-inner {
-    width: min(calc(100% - 28px), var(--container));
+    width: auto;
+    max-width: calc(100vw - 28px);
     padding: 22px 0;
+  }
+
+  .hero-copy {
+    max-width: min(100%, 350px);
+  }
+
+  .hero-media {
+    order: -1;
   }
 
   .hero-kicker {
@@ -4244,7 +4265,10 @@ svg {
 
   .hero-title {
     margin-top: 18px;
-    font-size: clamp(1.85rem, 9vw, 2.45rem);
+    max-width: min(100%, 350px);
+    overflow-wrap: break-word;
+    font-size: clamp(1.62rem, 7vw, 2.05rem);
+    line-height: 1.08;
   }
 
   .hero-summary {
@@ -4266,8 +4290,8 @@ svg {
 
   .hero-media-frame,
   .hero-media-frame img {
-    height: 350px;
-    min-height: 350px;
+    height: clamp(220px, 62vw, 290px);
+    min-height: 0;
     border-radius: 0;
   }
 
@@ -4277,6 +4301,7 @@ svg {
   }
 
   .hero-control {
+    top: calc(22px + clamp(110px, 31vw, 145px));
     width: 34px;
     height: 34px;
   }

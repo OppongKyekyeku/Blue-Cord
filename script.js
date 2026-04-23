@@ -595,11 +595,13 @@ if (heroCarousel && heroSlides.length > 0) {
   }
 
   const getHeroAnimatedItems = (slide) => slide.querySelectorAll(
-    ".hero-kicker, .hero-title, .hero-summary, .hero-actions, .hero-media-frame"
+    ".hero-kicker, .hero-title, .hero-summary, .hero-actions"
   );
 
+  const canAnimateHeroSlide = () => window.gsap && !prefersReducedMotion.matches && !mobileNavQuery.matches;
+
   const prepareHeroSlide = (slide) => {
-    if (!window.gsap || prefersReducedMotion.matches) {
+    if (!canAnimateHeroSlide()) {
       return;
     }
 
@@ -607,7 +609,7 @@ if (heroCarousel && heroSlides.length > 0) {
   };
 
   const animateHeroSlide = (slide) => {
-    if (!window.gsap || prefersReducedMotion.matches) {
+    if (!canAnimateHeroSlide()) {
       return;
     }
 
