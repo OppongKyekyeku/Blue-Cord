@@ -22,6 +22,7 @@ const consultationSection = document.querySelector(".consultation-section");
 const faqSection = document.querySelector(".faq-section");
 const getInTouchSection = document.querySelector(".get-in-touch-section");
 const statValues = document.querySelectorAll("[data-count]");
+const jotformFrames = document.querySelectorAll("[data-jotform-iframe]");
 
 const revealSite = () => {
   if (!document.body.classList.contains("is-loading")) {
@@ -38,6 +39,46 @@ if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", revealSite, { once: true });
 } else {
   revealSite();
+}
+
+const initializeJotformEmbeds = () => {
+  if (!jotformFrames.length) {
+    return;
+  }
+
+  const resizeFrames = () => {
+    if (typeof window.jotformEmbedHandler !== "function") {
+      return;
+    }
+
+    jotformFrames.forEach((frame) => {
+      window.jotformEmbedHandler(`iframe[id='${frame.id}']`, "https://form.jotform.com/");
+    });
+  };
+
+  if (typeof window.jotformEmbedHandler === "function") {
+    resizeFrames();
+    return;
+  }
+
+  const existingScript = document.querySelector("[data-jotform-embed-handler]");
+  if (existingScript) {
+    existingScript.addEventListener("load", resizeFrames, { once: true });
+    return;
+  }
+
+  const embedScript = document.createElement("script");
+  embedScript.src = "https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js";
+  embedScript.defer = true;
+  embedScript.dataset.jotformEmbedHandler = "true";
+  embedScript.addEventListener("load", resizeFrames, { once: true });
+  document.head.append(embedScript);
+};
+
+if (document.readyState === "complete") {
+  initializeJotformEmbeds();
+} else {
+  window.addEventListener("load", initializeJotformEmbeds, { once: true });
 }
 
 if (siteNav && navToggle && navPanel) {

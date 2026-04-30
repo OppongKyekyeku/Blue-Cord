@@ -344,12 +344,12 @@ const renderHeader = () => `
                   <li><a href="why-choose-us.html">Why Choose Us</a></li>
                 </ul>
               </li>
-              <li><a href="#get-in-touch">Contact</a></li>
-              <li><a href="#">Career</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="careers.html">Career</a></li>
               <li><a href="faq.html">FAQ</a></li>
             </ul>
           </nav>
-          <a class="nav-cta" href="#get-in-touch">BOOK APPOINTMENT</a>
+          <a class="nav-cta" href="book-appointment.html">BOOK APPOINTMENT</a>
         </div>
       </div>
     </div>
@@ -363,11 +363,6 @@ const renderHighlights = (service) => service.highlights.map((item) => `
     <p>${escapeHtml(item.text)}</p>
   </article>
 `).join("");
-
-const renderContactOptions = (activeKey) => allServices.map((service) => {
-  const selected = service.key === activeKey ? " selected" : "";
-  return `<option${selected}>${escapeHtml(service.title)}</option>`;
-}).join("");
 
 const renderConsultation = () => `
   <section class="consultation-section" id="consultation" aria-labelledby="consultation-title">
@@ -402,7 +397,7 @@ const renderConsultation = () => `
   </section>
 `;
 
-const renderContact = (service, activeKey) => `
+const renderContact = (service) => `
   <section class="get-in-touch-section" id="get-in-touch" aria-labelledby="get-in-touch-title">
     <div class="container get-in-touch-layout">
       <div class="get-in-touch-content">
@@ -419,33 +414,19 @@ const renderContact = (service, activeKey) => `
         <div class="get-in-touch-media">
           <img src="images/optimized/site/get-in-touch-portrait-female-doctor-phone.jpg" alt="Healthcare professional speaking by phone" loading="lazy" decoding="async">
         </div>
-        <form class="contact-form" action="mailto:bluecordhealthagencyllc@gmail.com" method="post" enctype="text/plain">
-          <div class="form-field">
-            <label for="contact-name">Full Name</label>
-            <input id="contact-name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="contact-phone">Phone</label>
-              <input id="contact-phone" name="phone" type="tel" autocomplete="tel" required>
-            </div>
-            <div class="form-field">
-              <label for="contact-email">Email</label>
-              <input id="contact-email" name="email" type="email" autocomplete="email">
-            </div>
-          </div>
-          <div class="form-field">
-            <label for="care-interest">Care Interest</label>
-            <select id="care-interest" name="care_interest" required>
-              ${renderContactOptions(activeKey)}
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="contact-message">How can we help?</label>
-            <textarea id="contact-message" name="message" rows="4" required></textarea>
-          </div>
-          <button class="contact-submit" type="submit">Submit Request</button>
-        </form>
+        <div class="get-in-touch-form-shell">
+          <iframe
+            id="JotFormIFrame-261185797652066"
+            class="jotform-frame get-in-touch-form-frame"
+            title="Blue Cord Health Agency get in touch form"
+            src="https://form.jotform.com/261185797652066?isIframeEmbed=1"
+            allowtransparency="true"
+            allow="geolocation; microphone; camera; fullscreen; payment"
+            referrerpolicy="strict-origin-when-cross-origin"
+            scrolling="no"
+            data-jotform-iframe
+          ></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -550,18 +531,8 @@ const renderMain = (service, activeKey) => `
       </div>
     </section>
 
-    <section class="service-page-cta-band" aria-labelledby="${activeKey}-cta-title">
-      <div class="container service-page-cta-panel">
-        <div>
-          <h2 id="${activeKey}-cta-title">Ready to discuss ${escapeHtml(service.title)}?</h2>
-          <p>Our care team can help you understand availability, scheduling, insurance questions, and the next step for your family.</p>
-        </div>
-        <a class="services-page-cta" href="#get-in-touch">Talk With Us</a>
-      </div>
-    </section>
-
     ${renderConsultation()}
-    ${renderContact(service, activeKey)}
+    ${renderContact(service)}
   </main>
 `;
 
