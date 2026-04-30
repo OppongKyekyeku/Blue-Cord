@@ -3,11 +3,11 @@ const servicePageData = {
     number: "01",
     title: "Private Duty Nursing",
     summary: "One-on-one nursing support for clients who need focused clinical attention, steady observation, and a care plan that works inside the comfort of home.",
-    heroBg: "images/optimized/site/services-backgrounds-african-american-doctor-senior-man-communicating-hospital-waiting-room-whil.jpg",
-    primaryImage: "images/optimized/site/services-african-doctor-medical-assistant-helping-senior-man-breath-using-oxygen-mask-hospital-l.jpg",
-    primaryAlt: "Medical assistant helping a senior man with an oxygen mask",
-    secondaryImage: "images/optimized/site/services-african-american-physician-nurse-wearing-protection-face-mask-prevent-infection-with-co.jpg",
-    secondaryAlt: "Nurse reviewing care details with an older patient",
+    heroBg: "images/optimized/site/repl-service-hero-private-duty.jpg",
+    primaryImage: "images/optimized/site/repl-portrait-06.jpg",
+    primaryAlt: "Professional homecare nurse providing attentive private duty support",
+    secondaryImage: "images/optimized/site/repl-portrait-07.jpg",
+    secondaryAlt: "Homecare professional standing ready to support a client's care plan",
     introTitle: "Focused Nursing Support at Home",
     introText: [
       "Private duty nursing is built for families who need dependable clinical help without moving care away from the home setting.",
@@ -40,11 +40,11 @@ const servicePageData = {
     number: "02",
     title: "Skilled & Non-Skilled Nursing",
     summary: "Flexible nursing and personal care support for clients who need both clinical guidance and help with everyday activities.",
-    heroBg: "images/optimized/site/services-backgrounds-interior-hospital-consulting-room-with-medical-eye-test-chart-wheelchair-se.jpg",
+    heroBg: "images/optimized/site/repl-service-hero-skilled.jpg",
     primaryImage: "images/optimized/site/services-nurse-giving-old-woman-pills-home-with-water-healthcare-wellness-help-caregiver-medicin.jpg",
     primaryAlt: "Caregiver helping an older woman take medication at home",
-    secondaryImage: "images/optimized/site/services-african-american-people-helping-old-man-attend-checkup-consultation-bringing-sick-patie.jpg",
-    secondaryAlt: "Doctor examining an older man during a checkup consultation",
+    secondaryImage: "images/optimized/site/repl-portrait-02.jpg",
+    secondaryAlt: "Professional homecare nurse prepared to support skilled and daily care needs",
     introTitle: "The Right Level of Help for Each Day",
     introText: [
       "Some clients need clinical support. Others need personal assistance, reminders, supervision, and help moving safely through the day.",
@@ -77,9 +77,9 @@ const servicePageData = {
     number: "03",
     title: "Companionship",
     summary: "Warm social support that helps clients feel connected, encouraged, and more confident through the rhythm of everyday life.",
-    heroBg: "images/optimized/site/services-backgrounds-happy-african-american-doctor-waving-video-call-while-working-hospital-coro.jpg",
-    primaryImage: "images/optimized/site/services-senior-woman-showing-her-doctor-photo-frame.jpg",
-    primaryAlt: "Senior woman showing a doctor a framed photograph",
+    heroBg: "images/optimized/site/repl-service-hero-companionship.jpg",
+    primaryImage: "images/optimized/site/repl-portrait-03.jpg",
+    primaryAlt: "Professional homecare nurse offering warm companionship support",
     secondaryImage: "images/optimized/site/services-nurse-senior-man-dancing-home-with-smile-recovery-results-walking-stick-retirement-blac.jpg",
     secondaryAlt: "Nurse and senior man smiling and dancing at home",
     introTitle: "Friendly Presence With Real Purpose",
@@ -110,50 +110,13 @@ const servicePageData = {
       { icon: "calendar", title: "Routine Friendly", text: "Care can fit naturally into regular days and favorite habits." }
     ]
   },
-  "in-facility-care": {
-    number: "04",
-    title: "In-Facility Care",
-    summary: "Extra one-on-one support for clients living in assisted living, independent living, or residential care communities.",
-    heroBg: "images/optimized/site/services-backgrounds-health-specialist-consulting-woman-with-crutches-hospital-reception-lobby-t.jpg",
-    primaryImage: "images/optimized/site/services-help-support-wheelchair-with-nurse-old-man-disability-rehabilitation-healing-retirement.jpg",
-    primaryAlt: "Nurse supporting an older man using a wheelchair",
-    secondaryImage: "images/optimized/site/services-happy-old-woman-nursing-home-sitting-couch-talking-with-her-caretaker-retired-woman-wit.jpg",
-    secondaryAlt: "Caretaker speaking with an older woman in a nursing home",
-    introTitle: "A Familiar Advocate Inside the Facility",
-    introText: [
-      "Facility teams work hard, but some clients benefit from personal attention that is focused only on them.",
-      "Blue Cord adds one-on-one support for daily routines, comfort, safety, communication, and participation in facility life."
-    ],
-    includes: [
-      "Assisted living support",
-      "Independent living support",
-      "One-on-one safety supervision",
-      "Meal and hydration prompts",
-      "Mobility support inside the facility",
-      "Family and facility coordination"
-    ],
-    approachTitle: "Extra attention where it matters most",
-    approachText: "Our caregivers help bridge the space between family expectations and daily facility routines with calm, reliable support.",
-    approachList: [
-      "Activity participation support",
-      "Personal hygiene reminders",
-      "Transition support after move-in",
-      "Regular updates for families"
-    ],
-    highlights: [
-      { icon: "home", title: "Facility Support", text: "Care can be provided in assisted living or independent living settings." },
-      { icon: "shield", title: "Safety Supervision", text: "One-on-one presence helps reduce avoidable risks." },
-      { icon: "users", title: "Care Coordination", text: "Support can align with family and facility communication." },
-      { icon: "heart", title: "Personal Attention", text: "Clients receive support centered on their own routine." }
-    ]
-  },
   "end-of-life-care": {
-    number: "05",
+    number: "04",
     title: "End-of-Life Care",
     summary: "Respectful comfort-focused support for clients and families navigating final-stage care with dignity, patience, and calm presence.",
-    heroBg: "images/optimized/site/services-backgrounds-team-young-specialist-doctors-standing-corridor-hospital.jpg",
-    primaryImage: "images/optimized/site/services-nurse-retirement-home-listening-old-sick-man-heart-bead-pensioner-lies-hospital-bed.jpg",
-    primaryAlt: "Nurse listening to an older man resting in bed",
+    heroBg: "images/optimized/site/repl-service-hero-end-of-life.jpg",
+    primaryImage: "images/optimized/site/repl-portrait-04.jpg",
+    primaryAlt: "Professional homecare nurse offering calm comfort-focused support",
     secondaryImage: "images/optimized/site/services-black-people-nurse-senior-holding-hands-wheelchair-elderly-care-healthcare-home-happy-a.jpg",
     secondaryAlt: "Caregiver holding hands with an older woman using a wheelchair",
     introTitle: "Gentle Support for a Tender Season",
@@ -185,12 +148,12 @@ const servicePageData = {
     ]
   },
   "twenty-four-hour-home-care": {
-    number: "06",
+    number: "05",
     title: "24-Hour Home Care",
     summary: "Continuous care coverage for clients who need dependable support throughout the day, overnight, and during unpredictable moments.",
-    heroBg: "images/optimized/site/services-backgrounds-medical-assistant-doing-consultation-with-patient-hospital-reception-lobby.jpg",
-    primaryImage: "images/optimized/site/services-wheelchair-user-waiting-prescription.jpg",
-    primaryAlt: "Wheelchair user waiting for a prescription",
+    heroBg: "images/optimized/site/repl-service-hero-24-hour.jpg",
+    primaryImage: "images/optimized/site/repl-portrait-01.jpg",
+    primaryAlt: "Professional homecare nurse available for continuous care support",
     secondaryImage: "images/optimized/site/services-caregiver-nurse-senior-black-man-couch-retirement-help-with-healthcare-walking-stick-ma.jpg",
     secondaryAlt: "Caregiver supporting an older man at home with a walking stick",
     introTitle: "Reliable Support Around the Clock",
@@ -222,14 +185,14 @@ const servicePageData = {
     ]
   },
   "alzheimers-dementia-care": {
-    number: "07",
+    number: "06",
     title: "Alzheimer's and Dementia Care",
     summary: "Memory care support built around safety, routine, reassurance, and respectful communication for clients and families.",
-    heroBg: "images/optimized/site/services-backgrounds-hospital-interior-with-operating-surgery-table-lamps-ultra-modern-devices-t.jpg",
+    heroBg: "images/optimized/site/repl-service-hero-alzheimers.jpg",
     primaryImage: "images/optimized/site/services-tablet-caregiver-senior-woman-sofa-browse-internet-telehealth-website-together-retireme.jpg",
     primaryAlt: "Caregiver and senior woman using a tablet together",
-    secondaryImage: "images/optimized/site/services-medium-shot-smiley-nurse-patient.jpg",
-    secondaryAlt: "Smiling nurse standing with an older patient",
+    secondaryImage: "images/optimized/site/repl-portrait-05.jpg",
+    secondaryAlt: "Professional homecare nurse supporting memory care routines",
     introTitle: "Steady Routines for Memory Support",
     introText: [
       "Memory-related conditions can make daily life feel confusing for clients and exhausting for families.",
@@ -311,7 +274,7 @@ const renderHeader = () => `
     <div class="nav-wrap">
       <div class="container site-nav">
         <a class="brand" href="index.html" aria-label="Bluecord home">
-          <img src="images/Blue Cord Horizontal logo.png" alt="Bluecord logo">
+          <img src="images/optimized/site/logo-horizontal.png" alt="Bluecord logo">
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-panel" aria-label="Open navigation menu">
           <span></span><span></span><span></span>
@@ -329,7 +292,6 @@ const renderHeader = () => `
                   <li><a href="private-duty-nursing.html">Private Duty Nursing</a></li>
                   <li><a href="skilled-non-skilled-nursing.html">Skilled &amp; Non-Skilled Nursing</a></li>
                   <li><a href="companionship.html">Companionship</a></li>
-                  <li><a href="in-facility-care.html">In-Facility Care</a></li>
                   <li><a href="end-of-life-care.html">End-of-Life Care</a></li>
                   <li><a href="twenty-four-hour-home-care.html">24-Hour Home Care</a></li>
                   <li><a href="alzheimers-dementia-care.html">Alzheimer's and Dementia Care</a></li>
@@ -364,39 +326,6 @@ const renderHighlights = (service) => service.highlights.map((item) => `
   </article>
 `).join("");
 
-const renderConsultation = () => `
-  <section class="consultation-section" id="consultation" aria-labelledby="consultation-title">
-    <div class="consultation-bg" data-consultation-bg aria-hidden="true"></div>
-    <div class="consultation-shade" aria-hidden="true"></div>
-    <div class="container consultation-layout">
-      <div class="consultation-call">
-        <svg class="consultation-sketch" viewBox="0 0 360 190" aria-hidden="true" role="presentation">
-          <path class="consultation-sketch-path" d="M18 34c8 66 62 91 118 70 51-19 48-56 19-56-32 0-41 54 11 83 36 20 78 13 118-20" />
-          <path class="consultation-plane" d="M284 111 340 82 316 146l-18-25-34-5 20-5Z" />
-          <path class="consultation-plane-detail" d="M284 111 316 146M298 121l42-39" />
-        </svg>
-        <a class="consultation-phone" href="tel:2407289632" aria-label="Call Blue Cord Health Agency">
-          <span class="consultation-phone-ripple"></span>
-          <span class="consultation-phone-ripple consultation-phone-ripple-two"></span>
-          <span class="consultation-phone-ripple consultation-phone-ripple-three"></span>
-          <span class="consultation-phone-ripple consultation-phone-ripple-four"></span>
-          ${serviceIcons.phone}
-        </a>
-      </div>
-      <div class="consultation-copy">
-        <h2 class="consultation-title" id="consultation-title">
-          <span>Online Consultations With</span>
-          <span>Qualified Doctors</span>
-        </h2>
-        <a class="consultation-cta" href="tel:2407289632">Make an Appointment</a>
-      </div>
-      <div class="consultation-media">
-        <img src="images/optimized/site/consultation-contact-fast.png" alt="Smiling healthcare contact center professional wearing a headset" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </section>
-`;
-
 const renderContact = (service) => `
   <section class="get-in-touch-section" id="get-in-touch" aria-labelledby="get-in-touch-title">
     <div class="container get-in-touch-layout">
@@ -412,7 +341,7 @@ const renderContact = (service) => `
       </div>
       <div class="get-in-touch-panel">
         <div class="get-in-touch-media">
-          <img src="images/optimized/site/get-in-touch-portrait-female-doctor-phone.jpg" alt="Healthcare professional speaking by phone" loading="lazy" decoding="async">
+          <img src="images/optimized/site/repl-get-in-touch-form.jpg" alt="Female homecare nurse ready to answer care questions" loading="lazy" decoding="async">
         </div>
         <div class="get-in-touch-form-shell">
           <iframe
@@ -439,7 +368,7 @@ const renderFooter = () => `
     <div class="container footer-layout">
       <div class="footer-brand">
         <a href="index.html" aria-label="Blue Cord home">
-          <img src="images/Blue_cord_white_horizontal_logo.png" alt="Blue Cord Health Agency">
+          <img src="images/optimized/site/logo-white-horizontal.png" alt="Blue Cord Health Agency">
         </a>
         <p>Your Health, Our Passion. Compassionate home care support built around dignity, comfort, safety, and the routines that matter most.</p>
       </div>
@@ -466,7 +395,7 @@ const renderFooter = () => `
       <div class="footer-cta">
         <h2>Ready to begin?</h2>
         <p>Connect with our team to discuss care needs, scheduling, and next steps.</p>
-        <a href="#get-in-touch">Schedule Your Care</a>
+        <a href="book-appointment.html">Schedule Your Care</a>
       </div>
     </div>
     <div class="container footer-bottom">
@@ -483,7 +412,7 @@ const renderMain = (service, activeKey) => `
         <h1 class="service-page-title" id="service-page-title">${escapeHtml(service.title)}</h1>
         <p class="service-page-summary">${escapeHtml(service.summary)}</p>
         <div class="service-page-actions">
-          <a class="services-page-cta" href="#get-in-touch">Schedule Care</a>
+          <a class="services-page-cta" href="book-appointment.html">Schedule Care</a>
           <a class="services-page-cta services-page-cta-secondary" href="services.html#service-list">View All Services</a>
         </div>
       </div>
@@ -531,7 +460,6 @@ const renderMain = (service, activeKey) => `
       </div>
     </section>
 
-    ${renderConsultation()}
     ${renderContact(service)}
   </main>
 `;

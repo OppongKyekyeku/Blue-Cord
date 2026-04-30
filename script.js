@@ -18,7 +18,6 @@ const serviceSection = document.querySelector(".services-section");
 const whySection = document.querySelector(".why-section");
 const serviceAreasSection = document.querySelector(".service-areas-section");
 const insuranceSection = document.querySelector(".insurance-section");
-const consultationSection = document.querySelector(".consultation-section");
 const faqSection = document.querySelector(".faq-section");
 const getInTouchSection = document.querySelector(".get-in-touch-section");
 const statValues = document.querySelectorAll("[data-count]");
@@ -524,35 +523,6 @@ if (window.gsap && window.ScrollTrigger) {
       y: 18,
       opacity: 0,
       duration: 0.95,
-      ease: "power3.out"
-    });
-  }
-
-  if (consultationSection && !prefersReducedMotion.matches) {
-    const syncConsultationBg = (self) => {
-      const y = -76 + self.progress * 152;
-      consultationSection.style.setProperty("--consultation-bg-y", `${y}px`);
-    };
-
-    ScrollTrigger.create({
-      trigger: consultationSection,
-      start: "top bottom",
-      end: "bottom top",
-      scrub: true,
-      onRefresh: syncConsultationBg,
-      onUpdate: syncConsultationBg
-    });
-
-    gsap.from(".consultation-copy, .consultation-call, .consultation-media", {
-      scrollTrigger: {
-        trigger: consultationSection,
-        start: "top 76%",
-        once: true
-      },
-      y: 18,
-      opacity: 0,
-      duration: 0.9,
-      stagger: 0.16,
       ease: "power3.out"
     });
   }

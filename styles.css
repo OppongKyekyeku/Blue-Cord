@@ -912,7 +912,7 @@ svg {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background-image: url("images/optimized/site/about-us-happy-people-portrait-doctor-with-healthcare-team-confidence-support-trust-hospital-gro.jpg");
+  background-image: url("images/optimized/site/repl-about-hero.jpg");
   background-position: center;
   background-size: cover;
   transform: scale(1.04);
@@ -2131,7 +2131,7 @@ svg {
 }
 
 .why-page-hero .services-page-hero-bg {
-  background-image: url("images/optimized/site/services-backgrounds-health-specialist-consulting-woman-with-crutches-hospital-reception-lobby-t.jpg");
+  background-image: url("images/optimized/site/repl-service-hero-companionship.jpg");
 }
 
 .faq-page-hero .services-page-hero-bg {
@@ -2139,17 +2139,22 @@ svg {
 }
 
 .contact-page-hero .services-page-hero-bg {
-  background-image: url("images/optimized/site/get-in-touch-portrait-female-doctor-phone.jpg");
+  background-image: url("images/optimized/site/repl-get-in-touch-form.jpg");
+  background-position: center 34%;
+}
+
+.get-in-touch-page-hero .services-page-hero-bg {
+  background-image: url("images/optimized/site/repl-get-in-touch-form.jpg");
   background-position: center 34%;
 }
 
 .careers-page-hero .services-page-hero-bg {
-  background-image: url("images/optimized/site/get-in-touch-portrait-female-doctor-phone.jpg");
+  background-image: url("images/optimized/site/repl-get-in-touch-form.jpg");
   background-position: center 36%;
 }
 
 .appointment-page-hero .services-page-hero-bg {
-  background-image: url("images/optimized/site/get-in-touch-portrait-female-doctor-phone.jpg");
+  background-image: url("images/optimized/site/repl-get-in-touch-form.jpg");
   background-position: center 32%;
 }
 
@@ -2324,6 +2329,11 @@ svg {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(24px, 4vw, 42px);
   align-items: start;
+}
+
+.contact-page-forms-single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 980px;
 }
 
 .contact-form-card {
@@ -3903,6 +3913,10 @@ svg {
 
   .pointer-glow,
   .pointer-dot {
+    display: none;
+  }
+
+  .contact-bar {
     display: none;
   }
 
